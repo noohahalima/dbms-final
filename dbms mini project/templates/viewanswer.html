@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+           background-color: grey;
+        }
+      
+        li {
+          float: left;
+        }
+      
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+      
+        li a:hover:not(.active) {
+          background-color:grey;
+        }
+      
+        .active {
+          background-color: grey;
+        }
+        </style>
+ 
+        </head>
+    <body>
+        <div style="display:flex; justify-content: space-between;background-color:white;">
+            <img style="width:50px;" src="../static/media/p.png" alt="logo" />
+            <ul>
+              <li style="float:right"><a href="/home">home</a></li>
+              <!-- <li style="float:right"><a href="#news">Sign in</a></li>
+              <li style="float:right"><a class="active" href="#about">About</a></li> -->
+            </ul>
+          </div>
+
+        <h1 style="text-align: center; margin-top: 107px;">answer Details</h1>
+        <div style="text-align: center; margin: 170px 40%;" >
+            <table style="border: 1px solid black; text-align: left;border-collapse: collapse;">
+                <tr style="border: 1px solid black;">
+                    <th style="border: 1px solid black;">ans_id</th>
+                    <th style="border: 1px solid black;">answers</th>
+                    <th style="border: 1px solid black;">question_id</th>
+                </tr>
+         {% for answer in answers %}
+                 <form action="/delete_answer/{{answer[1]}}"
+                    <tr style="border: 1px solid black;">
+                        <td style="border: 1px solid black;">{{answer[0]}}</td>
+                        <td style="border: 1px solid black;">{{answer[1]}}</td>
+                        <td style="border: 1px solid black;">{{answer[2]}}</td>
+                    </tr>
+                </form> 
+                {% endfor %}
+    
+        </table>
+    </div>
+    <footer style="background-color: #212121; text-align: center; margin-top: 25%;">
+        <p style="color: white; padding: 15px 0 ;"></p>
+    </footer>
+</body>
+</html>

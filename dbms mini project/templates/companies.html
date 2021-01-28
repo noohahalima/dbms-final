@@ -1,0 +1,96 @@
+<html>
+<head>
+  <title> Companies </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+       background-color: grey;
+    }
+  
+    li {
+      float: left;
+    }
+  
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    li a:hover:not(.active) {
+      background-color:grey;
+    }
+  
+    .active {
+      background-color: grey;
+    }
+    table, th, td {
+     border: 1px solid black;
+    padding: 15px;
+    }
+    table {
+  border-spacing: 15px;
+      }
+    </style>
+    </head>
+<body>
+
+
+<div style="display:flex; justify-content: space-between;background-color:white;">
+    <img style="width:50px;" src="../static/media/p.png" alt="logo" />
+    <ul>
+      <li style="float:right"><a href="/home">home</a></li>
+      <!-- <li style="float:right"><a href="#news">Sign in</a></li> -->
+      <!-- <li style="float:right"><a class="active" href="#about">About</a></li> -->
+      <!-- <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> -->
+      </a>
+    </li>
+    </ul>
+    </div>
+    <div style="text-align: center; margin: 170px 40%;" >
+    <table style="border: 1px solid black; text-align: left;border-collapse: collapse;width:200%;">
+        <tr style="border: 1px solid black;">
+            <th style="border: 1px solid black;">companyid</th>
+            <th style="border: 1px solid black;">company</th>
+            <th style="border: 1px solid black;">total students placed</th>
+            <th style="border: 1px solid black;">max packaage</th>
+            <th style="border: 1px solid black;">average package</th>
+        </tr>
+    </div>
+    {% for comp in companies %}
+            <tr style="border: 1px solid black;">
+                <td style="border: 1px solid black;">{{comp[0]}}</td>
+                <td style="border: 1px solid black;">{{comp[1]}}</td>
+                <td style="border: 1px solid black;">{{comp[2]}}</td>
+                <td style="border: 1px solid black;">{{comp[3]}}</td>
+                <td style="border: 1px solid black;">{{comp[4]}}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+  </div>

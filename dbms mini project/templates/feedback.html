@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title> feedback </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+       background-color: grey;
+    }
+  
+    li {
+      float: left;
+    }
+  
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    li a:hover:not(.active) {
+      background-color:grey;
+    }
+  
+    .active {
+      background-color: grey;
+    }
+    </style>
+    </head>
+
+    <body>
+
+        <div style="display:flex; justify-content: space-between;background-color:white;">
+            <img style="width:50px;" src="../static/media/p.png" alt="logo" />
+            <ul>
+              <li style="float:right"><a href="/home">home</a></li>
+              <!-- <li style="float:right"><a href="#news">Sign in</a></li> -->
+              <!-- <li style="float:right"><a class="active" href="#about">About</a></li> -->
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                .
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Companies</a>
+                <a class="dropdown-item" href="#">Feedback</a>
+                <a class="dropdown-item" href="#"></a>
+              </div>
+            </li>
+            </ul>
+
+
+
+          </div>
+          
+          <form style="text-align: center; margin-top: 6%;" action='/add_feedback' method="POST">
+            <div style="padding: 20px 0;">
+                <input style="background-color: #d3d1d1; padding: 10px 20px;" type="text" name="f_id" placeholder="Enter feedback_id">
+            </div>
+            <div style="padding: 10px 0;">
+                <input style="background-color: #d3d1d1; padding: 10px 20px;" type="text" name="feedback" placeholder="Enter feedback">
+            </div>
+            <div style="padding: 20px 0;">
+                <input style="background-color: #d3d1d1; padding: 10px 20px;" type="text" name="ssn" placeholder="Enter ssn">
+            </div>
+            <div style="padding: 20px 0;">
+              <input style="background-color: #d3d1d1; padding: 10px 20px;" type="submit" value="Submit">
+          </div>
+        </form>
+
+
+    </body>
+    </html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title> LOGIN FORM </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+     background-color: grey;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  </style>
+</head>
+
+
+
+<body style="background-image:url(/static/media/Placement.jpg);background-repeat:no-repeat;background-size:100% 100%" >
+   <div style="display:flex; justify-content: space-between;background-color:white;">
+
+
+     <img style="width:50px;" src="/static/media/p.png" alt="logo" />
+
+
+     <!-- <ul>
+       <li style="float:right"><a href="/home">Sign up</a></li>
+       <li style="float:right"><a href="#news">Sign in</a></li>
+       <li style="float:right"><a class="active" href="#about">About</a></li>
+       <li class="nav-item dropdown">
+   
+     </ul> -->
+
+
+   </div>
+
+
+  <div class="container" style="padding-top:2%;padding-bottom:3%;margin-top:3%;background-color:white;width:40%">
+     <form action="/login_button" method="post">
+    <div class="row">
+      <div class="col-sm-2">
+        <label>SSN</label>
+      </div>
+      <div class="col-sm-8">
+        <input type="text" name="ssn" style="border-radius:18px" class="form-control" >
+      </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-sm-2">
+          <label>password</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="password" name="password" style="border-radius:18px" class="form-control" >
+        </div>
+        </div>
+        <br/>
+        <input type="submit" value="submit" class="btn btn-light" style="margin-left:20%" >
+     </form>
+      </div>
+   
+  
+ </body>
+ </html>

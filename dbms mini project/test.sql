@@ -1,0 +1,1 @@
+INSERT INTO student values('s7','akhil','19','male','sahyadri','password7');
